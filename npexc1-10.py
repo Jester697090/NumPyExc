@@ -35,3 +35,21 @@ print(e)
 print(e.reshape(2, -1)) # ustawienie -1 pozwala funkcji automatycznie dobrać liczbę kolumn
 
 # Exc8
+print('Exc8')
+a = np.arange(10).reshape(2, -1)
+b = np.repeat(1, 10).reshape(2, -1)
+
+print(np.concatenate([a, b], axis=0))  # axis: 0 - w pionie, 1 - w poziomie
+# print(cp.vstack([a, b]))
+# print(np.r_[a, b])
+
+# Exc9
+print('Exc9')
+print(np.concatenate([a, b], axis=1))
+# print(np.hstack([a, b]))
+# print(np.c_[a, b])
+
+# Exc 10
+print('Exc10')
+c = np.array([1, 2, 3])
+print(np.hstack([np.repeat(c, 3), np.tile(c, 3)]))
